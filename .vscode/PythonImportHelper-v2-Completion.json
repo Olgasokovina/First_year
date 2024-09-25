@@ -1,0 +1,786 @@
+[
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "isExtraImport": true,
+        "detail": "func_for_server",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "isExtraImport": true,
+        "detail": "func_for_server",
+        "documentation": {}
+    },
+    {
+        "label": "TabularAutoML",
+        "importPath": "lightautoml.automl.presets.tabular_presets",
+        "description": "lightautoml.automl.presets.tabular_presets",
+        "isExtraImport": true,
+        "detail": "lightautoml.automl.presets.tabular_presets",
+        "documentation": {}
+    },
+    {
+        "label": "Task",
+        "importPath": "lightautoml.tasks",
+        "description": "lightautoml.tasks",
+        "isExtraImport": true,
+        "detail": "lightautoml.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestRegressor",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "RFECV",
+        "importPath": "sklearn.feature_selection",
+        "description": "sklearn.feature_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.feature_selection",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "statistics",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "statistics",
+        "description": "statistics",
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "cython",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cython",
+        "description": "cython",
+        "detail": "cython",
+        "documentation": {}
+    },
+    {
+        "label": "cythonize",
+        "importPath": "Cython.Build",
+        "description": "Cython.Build",
+        "isExtraImport": true,
+        "detail": "Cython.Build",
+        "documentation": {}
+    },
+    {
+        "label": "geodesic",
+        "importPath": "geopy.distance",
+        "description": "geopy.distance",
+        "isExtraImport": true,
+        "detail": "geopy.distance",
+        "documentation": {}
+    },
+    {
+        "label": "geodesic",
+        "importPath": "geopy.distance",
+        "description": "geopy.distance",
+        "isExtraImport": true,
+        "detail": "geopy.distance",
+        "documentation": {}
+    },
+    {
+        "label": "mode",
+        "importPath": "scipy.stats",
+        "description": "scipy.stats",
+        "isExtraImport": true,
+        "detail": "scipy.stats",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm.notebook",
+        "description": "tqdm.notebook",
+        "isExtraImport": true,
+        "detail": "tqdm.notebook",
+        "documentation": {}
+    },
+    {
+        "label": "SearchEngine",
+        "importPath": "uszipcode",
+        "description": "uszipcode",
+        "isExtraImport": true,
+        "detail": "uszipcode",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.server",
+        "description": "app.server",
+        "peekOfCode": "def index():\n    return \"Тестовое сообщение. Сервер запущен!\"\n@app.route('/predict', methods=['POST'])\ndef predict():\n    features = data_preprocessing(pd.read_json(request.json, orient='table'))\n    prediction_autoML = float(automl.predict(features).data[0, 0])\n    temp = selector_RFECV.get_feature_names_out()\n    prediction = model.predict(features[temp])\n    return jsonify({\n        'prediction_autoML': prediction_autoML,",
+        "detail": "app.server",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "app.server",
+        "description": "app.server",
+        "peekOfCode": "def predict():\n    features = data_preprocessing(pd.read_json(request.json, orient='table'))\n    prediction_autoML = float(automl.predict(features).data[0, 0])\n    temp = selector_RFECV.get_feature_names_out()\n    prediction = model.predict(features[temp])\n    return jsonify({\n        'prediction_autoML': prediction_autoML,\n        'prediction': prediction[0],\n    })\nif __name__ == '__main__':",
+        "detail": "app.server",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.server",
+        "description": "app.server",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/')\ndef index():\n    return \"Тестовое сообщение. Сервер запущен!\"\n@app.route('/predict', methods=['POST'])\ndef predict():\n    features = data_preprocessing(pd.read_json(request.json, orient='table'))\n    prediction_autoML = float(automl.predict(features).data[0, 0])\n    temp = selector_RFECV.get_feature_names_out()\n    prediction = model.predict(features[temp])",
+        "detail": "app.server",
+        "documentation": {}
+    },
+    {
+        "label": "state",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "state = 'WA'\ncity = 'Newcastle'\nzipcode = 98059\nstories = 1\nYear_built = 2015\nsqft = 1000\nlotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "city",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "city = 'Newcastle'\nzipcode = 98059\nstories = 1\nYear_built = 2015\nsqft = 1000\nlotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "zipcode",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "zipcode = 98059\nstories = 1\nYear_built = 2015\nsqft = 1000\nlotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "stories",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "stories = 1\nYear_built = 2015\nsqft = 1000\nlotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "Year_built",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "Year_built = 2015\nsqft = 1000\nlotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "sqft",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "sqft = 1000\nlotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "lotsize",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "lotsize = 1000\nbeds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False\nParking_lot = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "beds",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "beds = 2\nbaths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False\nParking_lot = False\npool = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "baths",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "baths = 1\nnumber_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False\nParking_lot = False\npool = False\nfireplace = True",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "number_school",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "number_school = 5\nschool_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False\nParking_lot = False\npool = False\nfireplace = True\nnew = True",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "school_distance_mean",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "school_distance_mean = 2\nschool_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False\nParking_lot = False\npool = False\nfireplace = True\nnew = True\nRemodeled = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "school_rating_mean",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "school_rating_mean = 5\n# Следующие переменные булевые могут быть True/False или 0/1\nGarage = False\nCarport = False\nParking_lot = False\npool = False\nfireplace = True\nnew = True\nRemodeled = False\ncool_bool = True",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "Garage",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "Garage = False\nCarport = False\nParking_lot = False\npool = False\nfireplace = True\nnew = True\nRemodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "Carport",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "Carport = False\nParking_lot = False\npool = False\nfireplace = True\nnew = True\nRemodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "Parking_lot",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "Parking_lot = False\npool = False\nfireplace = True\nnew = True\nRemodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "pool",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "pool = False\nfireplace = True\nnew = True\nRemodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "fireplace",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "fireplace = True\nnew = True\nRemodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "new",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "new = True\nRemodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "Remodeled",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "Remodeled = False\ncool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "cool_bool",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "cool_bool = True\nceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "ceiling_fan",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "ceiling_fan = True\nair_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "air_conditioner",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "air_conditioner = True\nheat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "heat_bool",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "heat_bool = True\ncentral_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "central_heating",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "central_heating = True\nforced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "forced_air_heating",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "forced_air_heating = False\npump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',\n#  'Single Family Home',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "pump_heating",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "pump_heating = False\ngas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',\n#  'Single Family Home',\n#  'Farms/Ranches',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "gas_heating",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "gas_heating = False\nelectric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',\n#  'Single Family Home',\n#  'Farms/Ranches',\n#  'multi_family',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "electric_heating",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "electric_heating = False\nauction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',\n#  'Single Family Home',\n#  'Farms/Ranches',\n#  'multi_family',\npropertyType = 'condo'",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "auction",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "auction = False\nforeclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',\n#  'Single Family Home',\n#  'Farms/Ranches',\n#  'multi_family',\npropertyType = 'condo'\ndf = pd.DataFrame(",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "foreclosure",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "foreclosure = False\n# propertyType может быть только:\n# 'condo',\n#  'Townhouse',\n#  'Single Family Home',\n#  'Farms/Ranches',\n#  'multi_family',\npropertyType = 'condo'\ndf = pd.DataFrame(\n    data=[[state, city, zipcode, stories, Year_built, sqft, lotsize, beds, baths,",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "propertyType",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "propertyType = 'condo'\ndf = pd.DataFrame(\n    data=[[state, city, zipcode, stories, Year_built, sqft, lotsize, beds, baths,\n           pool, fireplace, Garage, Carport, Parking_lot, new, Remodeled, cool_bool,\n           ceiling_fan, air_conditioner, heat_bool, central_heating, forced_air_heating,\n           pump_heating, gas_heating, electric_heating, auction, foreclosure, number_school,\n           school_distance_mean, school_rating_mean, propertyType]],\n    columns=['state', 'city', 'zipcode', 'stories', 'Year_built', 'sqft', 'lotsize',\n             'beds', 'baths', 'pool', 'fireplace', 'Garage', 'Carport', 'Parking_lot',\n             'new', 'Remodeled', 'cool_bool', 'ceiling_fan', 'air_conditioner',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "test.client",
+        "description": "test.client",
+        "peekOfCode": "df = pd.DataFrame(\n    data=[[state, city, zipcode, stories, Year_built, sqft, lotsize, beds, baths,\n           pool, fireplace, Garage, Carport, Parking_lot, new, Remodeled, cool_bool,\n           ceiling_fan, air_conditioner, heat_bool, central_heating, forced_air_heating,\n           pump_heating, gas_heating, electric_heating, auction, foreclosure, number_school,\n           school_distance_mean, school_rating_mean, propertyType]],\n    columns=['state', 'city', 'zipcode', 'stories', 'Year_built', 'sqft', 'lotsize',\n             'beds', 'baths', 'pool', 'fireplace', 'Garage', 'Carport', 'Parking_lot',\n             'new', 'Remodeled', 'cool_bool', 'ceiling_fan', 'air_conditioner',\n             'heat_bool', 'central_heating', 'forced_air_heating', 'pump_heating',",
+        "detail": "test.client",
+        "documentation": {}
+    },
+    {
+        "label": "compare_year",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def compare_year(row: cython.double) -> cython.double:\n    if (row['Year_built'] is not None) or (row['Remodeled_year'] is not None):\n        if (row['Year_built'] >= row['Remodeled_year']) and (\n                row['Year_built'] >= 1884):\n            return row['Remodeled_year']\n    return None\n@cython.cfunc\n@cython.exceptval(-2, check=True)\ndef compare_city(row: cython.double) -> cython.double:\n    if row['city'] is None or row['city_predict'] is None:",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "compare_city",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def compare_city(row: cython.double) -> cython.double:\n    if row['city'] is None or row['city_predict'] is None:\n        return None\n    if row['city'] in row['city_predict']:\n        return True\n    return False\n@cython.cfunc\n@cython.exceptval(-2, check=True)\ndef change_city_name(row: cython.double) -> cython.double:\n    if row['compare']:",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "change_city_name",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def change_city_name(row: cython.double) -> cython.double:\n    if row['compare']:\n        return row['city']\n    exceptions = ['02105', '03316', '05642', '05940', '22703', '27000', '33000',\n                  '33249', '38818', '44037', '78697', '90109', '98489', '98798', '99338']\n    if row['zipcode'] in exceptions:\n        return None\n    temp = []\n    pred = find_city_usps_from_zip(row['zipcode'])\n    # time.sleep(0.1)",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "acr_in_sqft",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def acr_in_sqft(x: cython.double) -> cython.double:\n    if 'None' in str(x) or x is np.NaN or '--' in str(x):\n        return None\n    if 'acr' in str(x) or 'Acr' in str(x):\n        return float(str(x).replace(',', '').strip().split()[0]) * 43560\n    if 'sqft' in str(x).lower():\n        return float(str(x).replace(',', '').replace(\n            'sqft', '').strip().split()[0])\n    if 'sq. ft.' in str(x).lower():\n        return float(str(x).replace(',', '').replace(",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_x",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_x(x: cython.double, sign: cython.double) -> cython.double:\n    x = str(x).lower()\n    for i in sign:\n        if i in str(x).lower():\n            return True\n    return False\n@cython.cfunc\n@cython.exceptval(-2, check=True)\ndef find_x_exc(x: cython.double, sign: cython.double,\n               notsign: cython.double) -> cython.double:",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_x_exc",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_x_exc(x: cython.double, sign: cython.double,\n               notsign: cython.double) -> cython.double:\n    x = str(x).lower()\n    for i in notsign:\n        if i in str(x).lower():\n            return False\n    for i in sign:\n        if i in str(x).lower():\n            return True\n    return False",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_city_usps_from_zip",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_city_usps_from_zip(zipcode: cython.double) -> cython.double:\n    url = 'https://tools.usps.com/tools/app/ziplookup/cityByZip'\n    data = {'zip': zipcode}\n    headers = {\n        'Content-Type': 'application/x-www-form-urlencoded',\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'\n    }\n    r = requests.post(url, data=data, headers=headers)\n    return r.json()\n@cython.cfunc",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_zip_usps_from_city",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_zip_usps_from_city(city: cython.double,\n                            state: cython.double) -> cython.double:\n    url = 'https://tools.usps.com/tools/app/ziplookup/zipByCityState'\n    data = {'city': city,\n            'state': state,\n            }\n    headers = {\n        # 'Content-Type': 'application/x-www-form-urlencoded',\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'\n    }",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_zip_usps_from_adress",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_zip_usps_from_adress(\n        address1: cython.double, city: cython.double, state: cython.double) -> cython.double:\n    url = 'https://tools.usps.com/tools/app/ziplookup/zipByAddress'\n    data = {'companyName': '',\n            'address1': address1,\n            'address2': '',\n            'city': city,\n            'state': state,\n            'urbanCode': '',\n            'zip': ''}",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_zip",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_zip(city: cython.double, state: cython.double) -> cython.double:\n    engine = SearchEngine()\n    plases = engine.by_city_and_state(city=city, state=state)\n    zip = []\n    for z in plases:\n        zip.append(z.zipcode)\n    return zip\n@cython.cfunc\n@cython.exceptval(-2, check=True)\ndef find_city(zip_code: cython.double) -> cython.double:",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_city",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_city(zip_code: cython.double) -> cython.double:\n    if (zip_code is None) or (zip_code is np.NaN) or (\n            zip_code == '') or (zip_code == ' '):\n        return None\n    exceptions = ['02105', '03316', '05642', '05940', '22703', '27000', '33000',\n                  '33249', '38818', '44037', '78697', '90109', '98489', '98798', '99338']\n    if zip_code in exceptions:\n        return None\n    else:\n        city_perdict = []",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "find_state",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def find_state(zip_code: cython.double) -> cython.double:\n    if (zip_code is None) or (zip_code is np.NaN) or (\n            zip_code == '') or (zip_code == ' '):\n        return None\n    exceptions = ['02105', '03316', '05642', '05940', '22703', '27000', '33000',\n                  '33249', '38818', '44037', '78697', '90109', '98489', '98798',\n                  '99338', '78697', 78697, '5940', 5940]\n    if zip_code in exceptions:\n        return None\n    search = SearchEngine()",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "school_distance_mean",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def school_distance_mean(x: cython.double) -> cython.double:\n    x = str(x).lower().replace('[', '').replace(']', '').replace(\n        \"'\", '').replace(\",\", '') .replace('mi', '')\n    lst = x.split()\n    lst = list(filter(None, lst))\n    if len(lst) == 0:\n        return None\n    for i in range(len(lst)):\n        lst[i] = float(lst[i])\n    else:",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "school_rating_mean",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def school_rating_mean(x: cython.double) -> cython.double:\n    lst = list(x)\n    for i in range(len(lst)):\n        if '/' in lst[i]:\n            lst[i] = str(lst[i]).split(sep='/')[0]\n        lst[i] = lst[i].lower().replace('none', '').replace('[', '').replace(\n            ']', '').replace(\",\", '').replace('nr', '').replace('na', '').replace(\"'\", '')\n    lst = list(filter(None, lst))\n    if len(lst) == 0:\n        return None",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "condo_tounhome",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def condo_tounhome(row):\n    if (row['condo'] == 1) and (row['Townhouse'] == 1):\n        if row['beds'] == 1:\n            row['Townhouse'] = False\n            return row\n        if row['sqft'] < 1500:\n            row['Townhouse'] = False\n            return row\n        if (row['sqft'] > 3000 or row['lotsize'] > 3000):\n            row['condo'] = False",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "condo_home",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def condo_home(row):\n    if (row['condo'] == 1) and (row['Single Family Home'] == 1):\n        if row['beds'] == 1:\n            row['Single Family Home'] = False\n            return row\n        if (row['sqft'] < 1800 or row['lotsize'] < 1800):\n            row['Single Family Home'] = False\n            return row\n        if (row['sqft'] > 3000 or row['lotsize'] > 3000):\n            row['condo'] = False",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "change_city_predict_usps",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def change_city_predict_usps(row: cython.double) -> cython.double:\n    if row['compare']:\n        return row['city']\n    if row['compare'] is None or row['city_predict_usps'] is None:\n        return row['city']\n    if row['compare'] == 0:\n        if pd.isna(row['city']) and len(\n                str(row['city_predict_usps']).split(sep=',')) == 1:\n            return row['city_predict_usps']\n        temp = ['Other',",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "compare_city_usps",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def compare_city_usps(row: cython.double) -> cython.double:\n    if row['compare']:\n        return row['compare']\n    if row['city'] is None or row['city_predict_usps'] is None:\n        return None\n    if str(row['city']).strip() in row['city_predict_usps']:\n        return True\n    return False\ndef city_coord(city, state):\n    # time.sleep(0.2)",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "city_coord",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def city_coord(city, state):\n    # time.sleep(0.2)\n    url = 'https://www.google.com/maps/search/' + city + ' ' + state + ' ' + 'USA'\n    Url_With_Coordinates = []\n    option = webdriver.ChromeOptions()\n    prefs = {\n        'profile.default_content_setting_values': {\n            'images': 2,\n            'javascript': 2}}\n    option.add_experimental_option('prefs', prefs)",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "city_state_coord",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def city_state_coord(df):\n    df['Full_Address'] = df['city'].str.cat(\n        df[['state']], sep=' ') + ' ' + 'USA'\n    df['Url'] = [\n        'https://www.google.com/maps/search/' +\n        i for i in df['Full_Address']]\n    Url_With_Coordinates = []\n    option = webdriver.ChromeOptions()\n    prefs = {\n        'profile.default_content_setting_values': {",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "length_city_city",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def length_city_city(lat_1, long_1, lat_2, long_2):\n    if (lat_1 is None) or (long_1 is None) or (\n            lat_2 is None) or (long_2 is None):\n        return None\n    length = geodesic((lat_1, long_1), (lat_2, long_2), ellipsoid='WGS-84').km\n    return length\n@cython.cfunc\n@cython.exceptval(-2, check=True)\ndef filtr_less(x, quantity):\n    if x is None:",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "filtr_less",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def filtr_less(x, quantity):\n    if x is None:\n        return None\n    if pd.isna(x):\n        return None\n    if x == 'del_data':\n        return 'del_data'\n    if x < quantity:\n        return x\n    return 'del_data'",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "filtr_more",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def filtr_more(x, quantity):\n    if x is None:\n        return None\n    if pd.isna(x):\n        return None\n    if x == 'del_data':\n        return 'del_data'\n    if x > quantity:\n        return x\n    return 'del_data'",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "my_mode",
+        "kind": 2,
+        "importPath": "func",
+        "description": "func",
+        "peekOfCode": "def my_mode(x):\n    moda, _ = mode(x, axis=0, nan_policy='omit', keepdims=False)\n    return np.round(moda, 2)",
+        "detail": "func",
+        "documentation": {}
+    },
+    {
+        "label": "round_baths",
+        "kind": 2,
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "peekOfCode": "def round_baths(baths):\n    if baths is None or baths is np.NaN:\n        return None\n    baths = float(baths)\n    full = baths // 1\n    lost = baths % 1\n    if lost >= 0 and lost < 0.25:\n        return full\n    if lost >= 0.25 and lost < 0.75:\n        lost = 0.5",
+        "detail": "func_for_server",
+        "documentation": {}
+    },
+    {
+        "label": "compare_city_major",
+        "kind": 2,
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "peekOfCode": "def compare_city_major(x, size):\n    if x is None:\n        return False\n    x = str(x)\n    if str(x).strip() in size:\n        return True\n    return False\ndef length_city_capital(row):\n    if (pd.isna(row['lat'])) or (pd.isna(row['long'])) or (\n            pd.isna(row['lat_capital'])) or (pd.isna(row['long_capital'])):",
+        "detail": "func_for_server",
+        "documentation": {}
+    },
+    {
+        "label": "length_city_capital",
+        "kind": 2,
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "peekOfCode": "def length_city_capital(row):\n    if (pd.isna(row['lat'])) or (pd.isna(row['long'])) or (\n            pd.isna(row['lat_capital'])) or (pd.isna(row['long_capital'])):\n        return None\n    length = geodesic((row['lat'], row['long']),\n                      (row['lat_capital'], row['long_capital'])).km\n    return length\ndef length_city_million(row):\n    if (pd.isna(row['lat'])) or (pd.isna(row['long'])):\n        return None",
+        "detail": "func_for_server",
+        "documentation": {}
+    },
+    {
+        "label": "length_city_million",
+        "kind": 2,
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "peekOfCode": "def length_city_million(row):\n    if (pd.isna(row['lat'])) or (pd.isna(row['long'])):\n        return None\n    with open(r'mln_city.pkl', 'rb') as pkl_file:\n        mln_city = pickle.load(pkl_file)\n    mln_city['lat_million_city'] = mln_city['lat_million_city'].astype('float')\n    mln_city['long_million_city'] = mln_city['long_million_city'].astype(\n        'float')\n    dist = []\n    for i in mln_city.index:",
+        "detail": "func_for_server",
+        "documentation": {}
+    },
+    {
+        "label": "data_preprocessing",
+        "kind": 2,
+        "importPath": "func_for_server",
+        "description": "func_for_server",
+        "peekOfCode": "def data_preprocessing(df):\n    features = pd.DataFrame(\n        columns=[\n            '1_level', '2_level', '3_level', '4_level', 'air_conditioner', 'auction',\n            'baths', 'beds', 'Carport', 'ceiling_fan', 'central_heating', 'city_is_big',\n            'city_is_capital', 'city_is_large', 'city_is_million', 'claster', 'condo',\n            'cool_bool', 'Crime Rate', 'distance_capital', 'distance_million',\n            'electric_heating', 'Farms/Ranches', 'firepl', 'forced_air_heating',\n            'foreclosure', 'Garage', 'gas_heating', 'HDI (2021)', 'heat_bool', 'lotsize',\n            'multi_family', 'multi_level', 'new', 'number_school', 'Parking_lot', 'pool',",
+        "detail": "func_for_server",
+        "documentation": {}
+    }
+]
